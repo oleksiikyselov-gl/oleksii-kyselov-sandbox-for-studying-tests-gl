@@ -1,0 +1,22 @@
+{
+  "name": "@repo/authorization",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./mocks": {
+      "default": "./mocks/index.ts",
+      "types": "./mocks/index.ts"
+    }
+  },
+  "scripts": {
+    "clean": "npx shx rm -rf dist coverage",
+    "test": "npx jest",
+    "lint": "npx eslint ./src",
+    "check-types": "npx tsc -p tsconfig.lib.json --noEmit",
+    "prebuild": "npm run check-types"
+  },
+  "dependencies": {}
+}

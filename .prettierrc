@@ -1,0 +1,18 @@
+{
+  "experimentalTernaries": false,
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "singleAttributePerLine": false,
+  "endOfLine": "lf",
+  "trailingComma": "all",
+  "importOrder": ["^react", "<THIRD_PARTY_MODULES>", "^@ex-tope-nt", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

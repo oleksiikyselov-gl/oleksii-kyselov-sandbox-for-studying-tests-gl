@@ -1,0 +1,6 @@
+{
+  "name": "@repo/jest-preset",
+  "version": "0.0.0",
+  "private": true,
+  "main": "jest.config.ts"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "!dist/cache/**"]
+    },
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "cache": true
+    },
+    "prebuild": {
+      "dependsOn": ["^prebuild"],
+      "cache": true
+    },
+    "check-types": {
+      "description": "Check the types of all packages",
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
+    "clean": {
+      "description": "Clean the temporary, cache directories from each package",
+      "dependsOn": ["^clean"],
+      "cache": false
+    }
+  }
+}

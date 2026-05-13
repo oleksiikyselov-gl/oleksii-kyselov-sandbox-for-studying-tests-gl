@@ -1,0 +1,17 @@
+module.exports = {
+  testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  transform: {
+    '^.+\\.(ts|tsx|js)$': 'babel-jest',
+  },
+  testMatch: ['**/src/**/*.spec.(ts|tsx)'],
+  modulePathIgnorePatterns: ['<rootDir>/node_modules/'],
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['lcov', 'text'],
+  collectCoverageFrom: [
+    '**/src/**/*.{ts,tsx}',
+    '!**/src/**/*.spec.{ts,tsx}',
+    '!**/node_modules/**',
+  ],
+};

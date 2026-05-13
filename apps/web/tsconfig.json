@@ -1,0 +1,6 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "types": ["jest", "@testing-library/jest-dom"]
+  }
+}

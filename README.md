@@ -1,16 +1,16 @@
-# React Monorepo Sandbox
+# React Monorepo Sandbox (for studying tests)
 
-A study-focused React + TypeScript monorepo demonstrating professional testing patterns and architectural best practices.
+A study-focused React + TypeScript monorepo demonstrating testing patterns and architectural practices.
 
 ## Features
 
 - **Monorepo Structure**: Managed via Turbo, separating applications (`apps/web`) from shared libraries (`libs/ui`, `libs/services`).
-- **Professional Testing**:
+- **Testing**:
   - Jest + JSDOM environment.
   - React Testing Library + user-event for realistic user interactions.
   - Mocking strategies (`jest.mock` & Mock-libraries).
   - 100% test coverage for UI components and services.
-- **Modern Styling**: CSS Modules with global theme variables.
+- **Styling**: CSS Modules with global theme variables.
 - **CI/CD**: Automatic deployment to GitHub Pages via GitHub Actions.
 
 ## Getting Started

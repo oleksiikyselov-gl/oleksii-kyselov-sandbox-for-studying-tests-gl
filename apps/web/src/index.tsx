@@ -1,11 +1,11 @@
-import { UserRegistrationForm } from '@repo/ui';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { UserRegistrationForm } from '@repo/ui';
+import styles from './App.module.css';
+import './index.css';
 
 const App = () => {
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Sandbox App</h1>
+    <div className={styles.appContainer}>
       <UserRegistrationForm />
     </div>
   );

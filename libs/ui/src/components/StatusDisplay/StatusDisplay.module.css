@@ -1,0 +1,22 @@
+.status {
+  padding: 0.5rem;
+  margin-top: 1rem;
+
+  font-weight: 500;
+  text-align: center;
+
+  border-radius: 4px;
+}
+
+.idle {
+  color: #6b7280;
+}
+.loading {
+  color: var(--primary-color);
+}
+.success {
+  color: var(--success-color);
+}
+.error {
+  color: var(--error-color);
+}

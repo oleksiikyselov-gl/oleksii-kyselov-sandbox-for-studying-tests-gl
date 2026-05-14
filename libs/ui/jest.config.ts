@@ -1,3 +1,5 @@
+const path = require('path');
+
 export default {
   testEnvironment: 'jsdom',
   displayName: 'ui',
@@ -12,7 +14,8 @@ export default {
   },
   transformIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
-    '^@ex-tope-nt/icons$': '@ex-tope-nt/icons/mocks',
+    '\\.module\\.css$': path.resolve(__dirname, '../../jest.styleMock.js'),
+    '\\.css$': path.resolve(__dirname, '../../jest.styleMock.js'),
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: './coverage/',

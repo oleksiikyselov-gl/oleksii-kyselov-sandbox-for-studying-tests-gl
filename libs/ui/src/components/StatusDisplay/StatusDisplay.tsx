@@ -1,6 +1,8 @@
+import styles from './StatusDisplay.module.css';
+
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-export const StatusDisplay = ({ status = 'idle', aTest }: { status: Status; aTest?: string }) => {
+export const StatusDisplay = ({ status, aTest }: { status: Status; aTest?: string }) => {
   const messages = {
     idle: 'Idle',
     loading: 'Loading...',
@@ -8,5 +10,11 @@ export const StatusDisplay = ({ status = 'idle', aTest }: { status: Status; aTes
     error: 'Error!',
   };
 
-  return <div data-a-test={aTest}>{messages[status]}</div>;
+  const className = `${styles.status} ${styles[status]}`;
+
+  return (
+    <div className={className} data-a-test={aTest}>
+      {messages[status]}
+    </div>
+  );
 };

@@ -9,9 +9,9 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'text'],
-  collectCoverageFrom: [
-    '**/src/**/*.{ts,tsx}',
-    '!**/src/**/*.spec.{ts,tsx}',
-    '!**/node_modules/**',
-  ],
+  collectCoverageFrom: ['**/src/**/*.{ts,tsx}', '!**/src/**/*.spec.{ts,tsx}', '!**/node_modules/**'],
+  moduleNameMapper: {
+    '\\.module\\.css$': '<rootDir>/jest.styleMock.js',
+    '\\.css$': '<rootDir>/jest.styleMock.js',
+  },
 };

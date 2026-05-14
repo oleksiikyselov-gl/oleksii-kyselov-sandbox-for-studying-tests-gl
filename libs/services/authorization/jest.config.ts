@@ -6,14 +6,11 @@ export default {
     '^.+\\.[tj]sx?$': [
       'babel-jest',
       {
-        configFile: '../../.babelrc.js',
+        configFile: '../../../.babelrc.js',
       },
     ],
   },
   transformIgnorePatterns: ['/node_modules/'],
-  moduleNameMapper: {
-    '^@ex-tope-nt/icons$': '@ex-tope-nt/icons/mocks',
-  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: './coverage/',
   coverageReporters: ['lcov'],

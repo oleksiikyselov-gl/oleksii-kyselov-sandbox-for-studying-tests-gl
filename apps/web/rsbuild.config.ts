@@ -8,4 +8,7 @@ export default defineConfig({
       index: './src/index.tsx',
     },
   },
+  output: {
+    assetPrefix: '/oleksii-kyselov-sandbox-for-studying-tests-gl/',
+  },
 });

@@ -1,7 +1,10 @@
 export default {
   testEnvironment: 'jsdom',
   displayName: 'authorization',
-  collectCoverage: true,
+  collectCoverage: false,
+  coverageDirectory: './coverage/',
+  coverageReporters: ['lcov'],
+  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.spec.{ts,tsx}', '!**/*.stories.{ts,tsx}'],
   transform: {
     '^.+\\.[tj]sx?$': [
       'babel-jest',
@@ -12,8 +15,5 @@ export default {
   },
   transformIgnorePatterns: ['/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: './coverage/',
-  coverageReporters: ['lcov'],
-  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.spec.{ts,tsx}', '!**/*.stories.{ts,tsx}'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
 };

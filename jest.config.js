@@ -6,7 +6,7 @@ module.exports = {
   },
   testMatch: ['**/src/**/*.spec.(ts|tsx)'],
   modulePathIgnorePatterns: ['<rootDir>/node_modules/'],
-  collectCoverage: true,
+  collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'text'],
   collectCoverageFrom: ['**/src/**/*.{ts,tsx}', '!**/src/**/*.spec.{ts,tsx}', '!**/node_modules/**'],

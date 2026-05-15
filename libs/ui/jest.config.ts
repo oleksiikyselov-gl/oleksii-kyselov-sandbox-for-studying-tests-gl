@@ -3,7 +3,10 @@ const path = require('path');
 export default {
   testEnvironment: 'jsdom',
   displayName: 'ui',
-  collectCoverage: true,
+  collectCoverage: false,
+  coverageDirectory: './coverage/',
+  coverageReporters: ['lcov'],
+  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.spec.{ts,tsx}', '!**/*.stories.{ts,tsx}'],
   transform: {
     '^.+\\.[tj]sx?$': [
       'babel-jest',
@@ -18,8 +21,5 @@ export default {
     '\\.css$': path.resolve(__dirname, '../../jest.styleMock.js'),
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: './coverage/',
-  coverageReporters: ['lcov'],
-  collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.spec.{ts,tsx}', '!**/*.stories.{ts,tsx}'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
 };

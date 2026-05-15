@@ -9,8 +9,9 @@
     "preview": "rsbuild preview",
     "lint": "eslint --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage",
+    "clean": "npx shx rm -rf dist coverage"
   },
   "dependencies": {
     "@repo/ui": "*"

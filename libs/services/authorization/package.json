@@ -13,10 +13,12 @@
   },
   "scripts": {
     "clean": "npx shx rm -rf dist coverage",
-    "test": "npx jest",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "npx eslint ./src",
     "check-types": "npx tsc -p tsconfig.lib.json --noEmit",
     "prebuild": "npm run check-types"
   },
+
   "dependencies": {}
 }
